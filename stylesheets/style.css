@@ -1,0 +1,166 @@
+/* Variables */
+:root {
+    --primary-color: rgb(33, 150, 243);
+    --secondary-color: rgb(47, 47, 47);
+    --terciary-color: rgb(83, 83, 83);
+    --background-color: rgb(33, 33, 33);
+    --text-color: white;
+}
+
+/* General Styles */
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+}
+
+body {
+    background-color: var(--background-color);
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    align-items: center;
+}
+
+/* Header */
+.title {
+    height: auto;
+}
+
+.title > h1 {
+    width: auto;
+}
+
+/* Stylish Box */
+.box {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: -webkit-fill-available;
+    max-width: 600px;
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1s ease-in;
+}
+
+#userInputContainer {
+    height: 70%;
+    margin-bottom: 10px;
+    display: flex;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    width: 600px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+#lineNumbers {
+    width: 50px;
+    background-color: var(--terciary-color);
+    text-align: right;
+    padding: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    user-select: none;
+    color: #555;
+}
+
+#lineNumbers span {
+    display: block;
+    line-height: 1.5em;
+}
+
+#userInput {
+    flex: 1;
+    border: none;
+    outline: none;
+    resize: none;
+    font-family: inherit;
+    font-size: 14px;
+    padding: 10px;
+    line-height: 1.5em;
+    background-color: var(--terciary-color);
+    height: 100%;
+}
+
+#searchWord {
+    margin-bottom: 10px;
+}
+
+textarea, input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background: var(--terciary-color);
+    resize: none;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background-color: rgba(33, 150, 243, 0.8);
+}
+
+.icon-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.icon-button img {
+    width: 24px;
+    height: 24px;
+    filter: invert(1);
+}
+
+.result {
+    margin-top: 20px;
+    background: #282828;
+    padding: 10px;
+    border-radius: 5px;
+    white-space: pre-wrap;
+    font-size: 14px;
+}
+
+/* Utility */
+.cflex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

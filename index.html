@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find and Delete</title>
+    <link rel="stylesheet" href="stylesheets/style.css"/>
+</head>
+<body>
+    <header class="title cflex">
+        <h1 class="cflex">Text Visualizer</h1>
+    </header>
+    <div class="box">
+        <button class="icon-button" onclick="findOccurrences()">
+            <img src="https://lh6.googleusercontent.com/proxy/-t9TeJyJ7LUbs00PqBVXWkXPMd3nEHatZQspCgyQcI2VtAINnNf2nfVOHCAWsHnP_GtFdSW97QirbBK8mu_8pO00nu4E_Fm7xXiQi47GXqv1sacW4sR5RnWDq8RjrpaJVRtydL735nSY__RszT6WTnlycXPfDaViFNlK1yXvobIW" alt="Search Icon">
+        </button>
+        <div id="userInputContainer">
+            <div id="lineNumbers"></div>
+            <textarea id="userInput" placeholder="Enter your text here..."></textarea>
+        </div>
+        <input type="text" id="searchWord" placeholder="Enter word to search">
+        <button onclick="findOccurrences()">Find</button>
+        <button onclick="deleteLines()">Delete Lines</button>
+        <div class="result" id="result"></div>
+    </div>
+
+    <script src="scripts/find.js"></script>
+    <script src="scripts/lineNumbers.js"></script>
+</body>
+</html>
